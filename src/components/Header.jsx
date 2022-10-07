@@ -1,15 +1,27 @@
-import { NewBudget } from './NewBudget';
+import { ControlBudget, NewBudget } from './';
 
+export const Header = ({
+  presupuesto,
+  setPresupuesto,
+  isValidPresupuesto,
+  setIsValidPresupuesto
+}) => {
 
-export const Header = ({presupuesto, setPresupuesto}) => {
   return (
     <header>
       <h1>Budget Control</h1>
       
-      <NewBudget
-        presupuesto={presupuesto}
-        setPresupuesto={setPresupuesto}
-      />
+      {isValidPresupuesto ? (
+        <ControlBudget
+          presupuesto={presupuesto}
+        />
+      ) : (
+        <NewBudget
+          presupuesto={presupuesto}
+          setPresupuesto={setPresupuesto}
+          setIsValidPresupuesto={setIsValidPresupuesto}
+        /> 
+      )}
     </header>
   )
 }
