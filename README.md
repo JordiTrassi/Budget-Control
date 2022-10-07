@@ -1,5 +1,5 @@
-<h1 align="center">Budget Control App.</h1> 
-<img src="https://cdn.iconscout.com/icon/free/png-256/budget-1850786-1571027.png" alt="budget-control" width="40" height="40" />
+<h1 align="center">Budget Control App.<br>
+<img src="https://cdn.iconscout.com/icon/free/png-256/budget-1850786-1571027.png" alt="budget-control" width="45" height="45" /></h1> 
 <h3>App created with Vite and Normalize CSS.</h3>
 <p>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40" /> 
