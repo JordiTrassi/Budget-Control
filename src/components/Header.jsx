@@ -1,12 +1,15 @@
 import { NewBudget } from './NewBudget';
 
 
-export const Header = () => {
+export const Header = ({presupuesto, setPresupuesto}) => {
   return (
     <header>
       <h1>Budget Control</h1>
       
-      <NewBudget />
+      <NewBudget
+        presupuesto={presupuesto}
+        setPresupuesto={setPresupuesto}
+      />
     </header>
   )
 }
