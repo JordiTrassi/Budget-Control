@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Header } from './components';
+import IconoNuevoGasto from './img/nuevo-gasto.svg';
 
 export const App = () => {
   
@@ -14,6 +15,13 @@ export const App = () => {
         isValidPresupuesto={isValidPresupuesto}
         setIsValidPresupuesto={setIsValidPresupuesto}
       />
+
+      {isValidPresupuesto && (
+        <div className='nuevo-gasto'>
+          <img src={IconoNuevoGasto} alt="icono-nuevo-gasto" />
+        </div>
+
+      )}
     </div>   
   )
 }
