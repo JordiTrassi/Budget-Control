@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Header, Modal } from './components';
+import { Header, ListadoGastos, Modal } from './components';
 import IconoNuevoGasto from './img/nuevo-gasto.svg';
 import { idCreator } from './helpers/idCreator';
 
@@ -40,13 +40,20 @@ export const App = () => {
       />
 
       {isValidPresupuesto && (
-        <div className='nuevo-gasto'>
-          <img
-            src={IconoNuevoGasto}
-            alt="icono-nuevo-gasto"
-            onClick={handleNuevoGasto}
-          />
-        </div>
+        <>
+          <main>
+            <ListadoGastos
+              gastos={gastos}
+            />
+          </main>
+          <div className='nuevo-gasto'>
+            <img
+              src={IconoNuevoGasto}
+              alt="icono-nuevo-gasto"
+              onClick={handleNuevoGasto}
+            />
+          </div>
+        </>
       )}
 
       {modal && <Modal
