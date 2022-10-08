@@ -23,6 +23,7 @@ export const App = () => {
 
   const guardarGasto = gasto => {
     gasto.id = idCreator();
+    gasto.fecha = Date.now();
     setGastos([...gastos, gasto]);
     setAnimarModal(false);
     setTimeout(() => {
