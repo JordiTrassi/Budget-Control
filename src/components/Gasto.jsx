@@ -5,7 +5,7 @@ import {
     SwipeAction,
     TrailingActions
 } from 'react-swipeable-list';
-// import 'react-swipeable-list/dist/styles.css';
+import 'react-swipeable-list/dist/styles.css';
 
 import { formatDate } from '../helpers/formatDate';
 
@@ -27,13 +27,33 @@ const diccionarioIconos = {
     suscripciones : IconoSuscripciones,
 }
 
-export const Gasto = ({ gasto }) => {
+export const Gasto = ({ gasto, setGastoEditar }) => {
     
     const { categoria, nombre, cantidad, id, fecha } = gasto;
 
+    const leadingActions = () => (
+        <LeadingActions>
+            <SwipeAction onClick={() => setGastoEditar(gasto)}>
+                Editar
+            </SwipeAction>
+        </LeadingActions>
+    );
+
+    const trailingActions = () => (
+        <TrailingActions>
+            <SwipeAction onClick={() => setGastoEditar(gasto) }>
+                Borrar
+            </SwipeAction>
+        </TrailingActions>
+    );
+
+
     return (
         <SwipeableList>
-            <SwipeableListItem>
+            <SwipeableListItem
+                leadingActions={leadingActions()}
+                trailingActions={trailingActions()}
+            >
                 <div className="gasto sombra">
                     <div className="contenido-gasto">
                         <img
