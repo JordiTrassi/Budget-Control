@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { formatMoney } from '../helpers';
 
 export const ControlBudget = ({
     gastos,
@@ -27,12 +28,12 @@ export const ControlBudget = ({
         }, 1000);
     }, [gastos]);
 
-    const formatearCantidad = (cantidad) => {
-        return cantidad.toLocaleString('de-DE', {
-            style: 'currency',
-            currency: 'EUR'
-        })
-    };
+    // const formatearCantidad = (cantidad) => {
+    //     return cantidad.toLocaleString('de-DE', {
+    //         style: 'currency',
+    //         currency: 'EUR'
+    //     })
+    // };
 
     const handleResetApp = () => {
         const resultado = confirm('¿Desea reiniciar el presupuesto?');
@@ -65,13 +66,13 @@ export const ControlBudget = ({
                     Reiniciar Presupuesto
                 </button>
                 <p>
-                    <span>Presupuesto: </span> {formatearCantidad(presupuesto)}
+                    <span>Presupuesto: </span> {formatMoney(presupuesto)}
                 </p>
                 <p className={`${disponible < 0 ? 'negativo' : ''}`}>
-                    <span>Disponible: </span> {formatearCantidad(disponible)}
+                    <span>Disponible: </span> {formatMoney(disponible)}
                 </p>
                 <p>
-                    <span>Gastado: </span> {formatearCantidad(gastado)}
+                    <span>Gastado: </span> {formatMoney(gastado)}
                 </p>
 
             </div>

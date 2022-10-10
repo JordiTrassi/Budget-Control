@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Filter, Header, ListadoGastos, Modal } from './components';
 import IconoNuevoGasto from './img/nuevo-gasto.svg';
-import { idCreator } from './helpers/idCreator';
+import { idCreator } from './helpers';
 
 export const App = () => {
 

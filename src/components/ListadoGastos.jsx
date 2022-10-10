@@ -7,6 +7,7 @@ export const ListadoGastos = ({
     filtro,
     gastosFiltrados
 }) => {
+    
   return (
       <div className="listado-gastos contenedor">
 

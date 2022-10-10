@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Message } from './Message';
 import CerrarBtn from '../img/cerrar.svg';
 
-
 export const Modal = ({
     setModal,
     animarModal,

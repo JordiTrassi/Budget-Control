@@ -7,7 +7,7 @@ import {
 } from 'react-swipeable-list';
 import 'react-swipeable-list/dist/styles.css';
 
-import { formatDate } from '../helpers/formatDate';
+import { formatDate, formatMoney } from '../helpers';
 
 import IconoAhorro from '../img/icono_ahorro.svg';
 import IconoCasa from '../img/icono_casa.svg';
@@ -72,7 +72,7 @@ export const Gasto = ({ gasto, setGastoEditar, eliminarGasto }) => {
                             </p>
                         </div>
                     </div>
-                    <p className='cantidad-gasto'>{cantidad} €</p>
+                    <p className='cantidad-gasto'>{formatMoney(cantidad)}</p>
                 </div>
             </SwipeableListItem>
         </SwipeableList>
