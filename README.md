@@ -1,4 +1,4 @@
-d<h1 align="center">Budget Control App.<br>
+<h1 align="center">Budget Control App.<br>
 <img src="https://cdn.iconscout.com/icon/free/png-256/budget-1850786-1571027.png" alt="budget-control" width="45" height="45" /></h1> 
 <h3>App created with Vite and Normalize CSS.</h3>
 <p>
