@@ -7,4 +7,6 @@
 <img src="https://necolas.github.io/normalize.css/logo.svg" alt="tailwindcss" width="40" height="40" />
 </p>
 
+[Visit my App at Netlify!](https://trassi-budget-control.netlify.app)
+
 <a href="https://trassi-budget-control.netlify.app"><h3 align="center">Visit my App at Netlify!</h3></a>
